@@ -25,8 +25,7 @@ print("Practitioner:", proc2.get_practitioner())
 print("Charge: $", float(proc2.get_charge()))
 
 if pat.get_veteran_status == TRUE:
-    c = float(proc1.get_charge()) + float(proc2.get_charge())
-    tc = c * 0.40
+    tc = 0.40 * (proc1.get_charge() + proc2.get_charge())
 else:
     tc = proc1.get_charge() + proc2.get_charge()
 
