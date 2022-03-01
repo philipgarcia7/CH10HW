@@ -24,10 +24,12 @@ print("Date:", proc2.get_date())
 print("Practitioner:", proc2.get_practitioner())
 print("Charge: $", float(proc2.get_charge()))
 
-if pat.get_veteran_status == TRUE:
-    tc = 0.40 * (proc1.get_charge() + proc2.get_charge())
-else:
-    tc = proc1.get_charge() + proc2.get_charge()
+
+tc = proc1.get_charge() + proc2.get_charge()
+if pat.get_veteran_status() == TRUE:
+    discount = tc * 0.40
+    tc -= discount
+
 
 print()
-print("Total Charges: $", tc)
+print("Total Charges: $", format(tc, ",.2f"))
