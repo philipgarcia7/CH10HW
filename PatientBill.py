@@ -26,6 +26,7 @@ print("Charge: $", float(proc2.get_charge()))
 
 
 tc = proc1.get_charge() + proc2.get_charge()
+
 if pat.get_veteran_status() == TRUE:
     discount = tc * 0.40
     tc -= discount
